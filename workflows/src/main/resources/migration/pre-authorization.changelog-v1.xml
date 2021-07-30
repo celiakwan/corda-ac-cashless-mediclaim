@@ -1,0 +1,22 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <changeSet author="R3.Corda" id="create_pre_authorization_states">
+        <createTable tableName="pre_authorization_states">
+            <column name="output_index" type="INT"/>
+            <column name="transaction_id" type="NVARCHAR(64)"/>
+            <column name="policy_holder_name" type="NVARCHAR(64)"/>
+            <column name="membership_number" type="NVARCHAR(64)"/>
+            <column name="provider_account_name" type="NVARCHAR(64)"/>
+            <column name="diagnosis_description" type="NVARCHAR(128)"/>
+            <column name="currency" type="NVARCHAR(8)"/>
+            <column name="amount" type="NUMERIC"/>
+            <column name="policy_issuer_account_name" type="NVARCHAR(64)"/>
+            <column name="submission_time" type="TIMESTAMP WITH TIME ZONE"/>
+            <column name="status" type="NVARCHAR(64)"/>
+            <column name="linear_id" type="UUID"/>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
